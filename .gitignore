@@ -1,13 +1,38 @@
 # 로컬 접속 정보는 저장소에 커밋하지 않는다.
 .env
 
-# 운영체제/편집기 임시 파일
-.DS_Store
+# Windows 시스템 파일
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# macOS 시스템 파일
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDE (IntelliJ IDEA, DataGrip 등)
+.idea/
+*.iml
+
+# Vim 및 일반 편집기 임시 파일
 *.swp
+*.swo
+*~
 *.tmp
+
+# 로그 파일
+*.log
 
 # 사용자가 직접 저장하는 결과 이미지 자체는 추적할 수 있지만,
 # 임시 다운로드 파일은 제외한다.
 results/*.part
-
