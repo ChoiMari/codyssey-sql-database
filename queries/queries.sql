@@ -192,25 +192,31 @@ ORDER BY loan_month;
 -- 목적: 22번 대여를 반납 처리하고 변경 결과를 확인한다.
 -- 학습 포인트: UPDATE, 트랜잭션, ROLLBACK
 -- START TRANSACTION부터 ROLLBACK까지 함께 실행하면 학습 데이터는 원상 복구된다.
+-- 실행 보호: 자동 커밋을 끄고 수정 실습 범위를 하나의 트랜잭션으로 묶는다.
 START TRANSACTION;
 
+-- 수정 대상: PK와 현재 미반납 조건을 함께 사용해 22번 대여 한 건만 변경한다.
 UPDATE loans
 SET returned_on = '2026-09-10'
 WHERE loan_id = 22
   AND returned_on IS NULL;
 
+-- 결과 확인: ROLLBACK 전에 변경된 반납일을 조회한다.
 SELECT loan_id, member_id, book_id, loaned_on, due_on, returned_on
 FROM loans
 WHERE loan_id = 22;
 
+-- 원상 복구: 반복 실습을 위해 UPDATE 결과를 저장하지 않는다.
 ROLLBACK;
 
 -- Query 17
 -- 목적: 대여 이력이 없는 테스트 회원을 삭제하고 삭제 결과를 확인한다.
 -- 학습 포인트: DELETE, NOT EXISTS, 트랜잭션, ROLLBACK
 -- NOT EXISTS 조건이 있어 대여 이력이 생기면 삭제되지 않으며, 마지막에 원상 복구한다.
+-- 실행 보호: 삭제 실습 범위를 하나의 트랜잭션으로 묶는다.
 START TRANSACTION;
 
+-- 삭제 대상: 테스트 회원이면서 대여 이력이 없는 경우에만 삭제한다.
 DELETE FROM members
 WHERE member_id = 12
   AND NOT EXISTS (
@@ -219,10 +225,12 @@ WHERE member_id = 12
       WHERE loans.member_id = members.member_id
   );
 
+-- 결과 확인: 삭제되었다면 이 SELECT는 0행을 반환한다.
 SELECT member_id, member_name, email
 FROM members
 WHERE member_id = 12;
 
+-- 원상 복구: 회원 12번을 복구해 각 테이블 10행 이상 조건을 유지한다.
 ROLLBACK;
 
 -- Query 18
@@ -243,4 +251,3 @@ SELECT loan_id, member_id, book_id, due_on
 FROM loans
 WHERE book_id = 3
   AND returned_on IS NULL;
-
