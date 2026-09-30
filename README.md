@@ -219,3 +219,51 @@ docker compose stop
 docker compose down --volumes
 ```
 
+
+# 핵심 쿼리 15개 + 실행 결과 캡처(과제 제출 조건)
+* 조회/조인/집계/서브쿼리/수정 및 삭제까지 포함한 쿼리 15개를 작성한다.
+### Query 01 실행 결과
+![Query 01 실행 결과](./results/query-01.png)
+
+### Query 02 실행 결과
+![Query 02 실행 결과](./results/query-02.png)
+
+### Query 03 실행 결과
+![Query 03 실행 결과](./results/query-03.png)
+
+### Query 04 실행 결과
+![Query 04 실행 결과](./results/query-04.png)
+
+### Query 05 실행 결과
+![Query 05 실행 결과](./results/query-05.png)
+
+### Query 06 실행 결과
+![Query 06 실행 결과](./results/query-06.png)
+
+### Query 07 실행 결과
+![Query 07 실행 결과](./results/query-07.png)
+
+### Query 08 실행 결과
+![Query 08 실행 결과](./results/query-08.png)
+
+### Query 09 실행 결과
+![Query 09 실행 결과](./results/query-09.png)
+
+### Query 10 실행 결과
+![Query 10 실행 결과](./results/query-10.png)
+
+### Query 11 실행 결과
+![Query 11 실행 결과](./results/query-11.png)
+
+### Query 12 실행 결과
+![Query 12 실행 결과](./results/query-12.png)
+
+### Query 13 실행 결과
+![Query 13 실행 결과](./results/query-13.png)
+
+### Query 14 실행 결과
+![Query 14 실행 결과](./results/query-14.png)
+
+### Query 15 실행 결과
+![Query 15 실행 결과](./results/query-15.png)
+
