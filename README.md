@@ -267,3 +267,6 @@ docker compose down --volumes
 ### Query 15 실행 결과
 ![Query 15 실행 결과](./results/query-15.png)
 
+### Query 18 실행 결과
+![Query 18 실행 결과](./results/query-18.png)
+
