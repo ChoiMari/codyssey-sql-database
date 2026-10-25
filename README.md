@@ -3,9 +3,9 @@
 백엔드 프레임워크 없이 MySQL에서 직접 **스키마 생성 → 샘플 데이터 입력 → 조회·수정·삭제 → 결과 확인**의 전체 과정을 연습하는 SQL 프로젝트입니다.  
 회원, 도서, 저자, 카테고리, 대여 기록 사이의 관계를 데이터베이스 제약조건으로 표현하고, 실무에서 자주 사용하는 조회 요구를 SQL 한 문장으로 해결합니다.  
 
-발표 준비는 [EXPLANATION.md](EXPLANATION.md), 
-테이블 관계 그림은 [erd/README.md](erd/README.md), 
-쿼리별 캡처 방법은 [results/README.md](results/README.md)를 참고
+평가표 항목별 답안은 [EVALUATION_ANSWERS.md](EVALUATION_ANSWERS.md), 평가 시연 SQL은 [queries/evaluation_demo.sql](queries/evaluation_demo.sql)을 참고하세요.
+
+발표 준비는 [EXPLANATION.md](EXPLANATION.md), 테이블 관계 그림은 [erd/README.md](erd/README.md), 쿼리별 캡처 방법은 [results/README.md](results/README.md)를 참고하세요.
 
 ## 1. 과제 목적
 
